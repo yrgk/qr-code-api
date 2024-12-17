@@ -9,8 +9,8 @@ from models import QrCode
 app = FastAPI()
 
 @app.post("/create")
-def create_qr_code(url: str, object_name: str):
-    qr_code = utils.generate_and_upload_qr(url, object_name)
+def create_qr_code(body: QrCode):
+    qr_code = utils.generate_and_upload_qr(body.url, body.object_name)
 
     return qr_code
 
