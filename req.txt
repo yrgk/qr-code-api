@@ -1,0 +1,7 @@
+boto3
+fastapi
+pillow
+pydantic
+python-dotenv
+qrcode
+uvicorn
